@@ -7,11 +7,12 @@
 #=======================================================================
 
 #only ok for project with no templated classes
+$(info $(SHELL))
 
 #compiler
-COMPILER = g++-5
+COMPILER = g++
 #linker
-LINKER =g++-5
+LINKER =g++
 
 #options for linker and compiler
 FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -std=c++11
@@ -19,7 +20,7 @@ FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -s
 EXE_NAME= palindrome.exe
 
 #can have several ones separated by spaces, only cpp files
-SOURCES = main_palindrome.cpp myUtils.cpp 
+SOURCES = palindrome.cpp
 
 
 #PATH to extra header used in the project (when using libs not installed in the OS)
