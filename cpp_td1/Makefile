@@ -10,17 +10,17 @@
 $(info $(SHELL))
 
 #compiler
-COMPILER = g++
+COMPILER = g++-5
 #linker
-LINKER =g++
+LINKER =g++-5
 
 #options for linker and compiler
 FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -std=c++11
 
-EXE_NAME= palindrome.exe
+EXE_NAME= automate.exe
 
 #can have several ones separated by spaces, only cpp files
-SOURCES = palindrome.cpp
+SOURCES = automate.cpp
 
 
 #PATH to extra header used in the project (when using libs not installed in the OS)
