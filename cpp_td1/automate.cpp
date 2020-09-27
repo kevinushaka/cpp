@@ -21,12 +21,12 @@ private:
 const int NB_LOOP=10;
 const int NB_CELLS=10;
 
-void print(vector<bool> v);
-void print(vector<vector<bool>> v);
+void print(const vector<bool>& v);
+void print(const vector< vector<bool>>& v);
 vector<bool> onedim_cells(int n);
 vector<vector<bool>> twodim_cells(int n);
-vector<bool>  automate(vector<bool> cells, int nbLoop);
-vector<vector<bool>> automate(vector<vector<bool>> cells, int nbLoop);
+vector<bool>  automate(vector<bool>& cells, int nbLoop);
+vector<vector<bool>> automate(vector<vector<bool>>& cells, int nbLoop);
 
 int main(){
     vector<bool> cells_onedim;
@@ -72,7 +72,7 @@ vector<vector<bool>> twodim_cells(int n){
     return cells;
 }
 
-vector<bool> automate(vector<bool> cells, int nbLoop){
+vector<bool> automate(vector<bool>& cells, int nbLoop){
     int n=cells.size();
     int k=0;
     while(k++!=nbLoop){
@@ -84,11 +84,11 @@ vector<bool> automate(vector<bool> cells, int nbLoop){
     return cells;
 }
 
-vector<vector<bool>> automate(vector<vector<bool>> cells, int nbLoop){
+vector<vector<bool>> automate(vector<vector<bool>>& cells, int nbLoop){
     return cells;
 }
 
-void print(vector<bool> v){
+void print(const vector<bool>& v){
     int n=v.size();
     for(int i= 0 ;i<n;i++){
         cout<<v[i]<<" ";
@@ -96,7 +96,7 @@ void print(vector<bool> v){
     cout<<endl;
 }
 
-void print(vector<vector<bool>> v){
+void print(const vector<vector<bool>>& v){
     int n=v.size();
     for(int i= 0 ;i<n;i++){
         for(int j= 0 ;j<n;j++){
