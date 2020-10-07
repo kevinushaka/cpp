@@ -43,6 +43,7 @@
         "functional": "cpp",
         "numeric": "cpp",
         "iterator": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "bit": "cpp"
     }
 }
