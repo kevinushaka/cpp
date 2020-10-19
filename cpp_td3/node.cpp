@@ -28,8 +28,20 @@ void Node::removeAllChildren(){
 
 }
 
-void Node::iterateLeftHand(){
+std::vector<Node> Node::iterateLeftHand(){
+    std::vector<Node> nodes;
+    _iterateLeftHand(nodes,this);
+    return nodes;
+}
 
+void Node::_iterateLeftHand(std::vector<Node>& nodes,Node* pNode){
+    nodes.push_back(*(pNode));
+    if(pNode->left!=nullptr){
+        _iterateLeftHand(nodes,pNode->left);
+    }
+    if(pNode->right!=nullptr){
+        _iterateLeftHand(nodes,pNode->right);
+    }
 }
 
 std::ostream& operator<<(std::ostream& os, const Node& p){
@@ -38,7 +50,7 @@ std::ostream& operator<<(std::ostream& os, const Node& p){
     if(p.left!=nullptr){
        
         os<< "Left@ : "<< p.left<<" ,";
-        os<< "Right@ : "<< p.left<<"}";
+        os<< "Right@ : "<< p.right<<"}";
     }else{
         os<< "Left@ : ,";
         os<< "Right@ : }";

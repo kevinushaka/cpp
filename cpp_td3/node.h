@@ -2,6 +2,7 @@
 #define NODE_H
 
 #include<iostream>
+#include <vector>
 
 class Node{
     private:
@@ -27,7 +28,8 @@ class Node{
 
         //Functions
         void removeAllChildren();
-        void iterateLeftHand();
+        std::vector<Node> iterateLeftHand();
+        void _iterateLeftHand(std::vector<Node>& nodes,Node* pNode);
 
 
         //Operators

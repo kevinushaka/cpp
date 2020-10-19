@@ -1,17 +1,16 @@
 #include "person.h"
 
-enum Name {FRED="Fred",REGIS="Regis",MARIE="Marie",PEDRO="Pedro"};
 
-Person::std::vector<Person>& marry(const Person& other){
+std::vector<Person>& Person::marry(const Person& other){
     this.partner=&other;
-    Person child = new Person{Name::FRED};
-    vector<Person> childs;
+    Person child = new Person{};
+    std::vector<Person> childs;
     childs.push_back(child);
     return childs;
 }
 
-void Person::setParents(const Person& father, const Person& mother){
+void Person::setParents( Person& father, Person& mother){
 
-    this.parents[0]=father;
-    this.parents[1]=mother;
+    this->parents[0]=father;
+    this->parents[1]=mother;
 }

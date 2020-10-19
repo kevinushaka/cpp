@@ -13,6 +13,15 @@ int main(){
     std::cout<<nA<<std::endl;
     std::cout<<nB<<std::endl;
     std::cout<<nC<<std::endl;
+    std::cout<<nD<<std::endl;
+    std::cout<<nE<<std::endl;
+    std::cout<<nF<<std::endl;
+    std::cout<<nG<<std::endl;
+
+    std::vector<Node> infixe=nA.iterateLeftHand(); 
+    for(Node node:infixe){
+        std::cout<<node.getValue()<<" ";
+    }
 
     return 0;
 }

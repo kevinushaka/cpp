@@ -1,5 +1,4 @@
 #include <iostream>
-#include "person.h"
 
 using namespace std;
 
@@ -20,8 +19,15 @@ string do_something_ex6(string& s);
 string& do_something_ex7(string s);
 string do_something_ex8(string** s);
 
+class B{
+
+};
+class A{
+    public:
+        B* b;
+};
+
 int main(){
-    
 
 }
 

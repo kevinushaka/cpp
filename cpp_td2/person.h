@@ -12,17 +12,17 @@ class Person{
         std::string name;
         const Person::Gender gender;
         Person* partner=nullptr;
-        std::array<Person,2> parents;
+        std::vector<Person>& parents;
     
     public:
         Person(std::string str="", 
         Person::Gender gender=Person::Gender::NONBINARY)
-        :name(str),gender(gender){}
+        :name(str),gender(gender),parents(std::vector<Person>(2)){}
 
         std::vector<Person>& marry(const Person& other);
         void divorce(){partner=nullptr;}
         std::string getName() const{return name;}
-        void setParents(const Person& father, const Person& mother);
+        void setParents(const Person& father, Person& mother);
     
 
 };
