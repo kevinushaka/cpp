@@ -10,9 +10,9 @@
 $(info $(SHELL))
 
 #compiler
-COMPILER = g++
+COMPILER = g++-5
 #linker
-LINKER =g++
+LINKER =g++-5
 
 #options for linker and compiler
 FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -std=c++11
