@@ -9,9 +9,9 @@
 #only ok for project with no templated classes
 
 #compiler
-COMPILER = g++-5
+COMPILER = g++
 #linker
-LINKER =g++-5
+LINKER =g++
 
 #options for linker and compiler
 FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -std=c++11
