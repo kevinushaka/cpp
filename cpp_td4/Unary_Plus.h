@@ -18,6 +18,8 @@ class Unary_Plus : public Unary_Expr
 {
 public:
     Unary_Plus(Expr& pe) : Unary_Expr(pe) {}
+
+    virtual int eval()const;
 };
 
 #endif

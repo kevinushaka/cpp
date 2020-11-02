@@ -10,7 +10,7 @@ class Binary_Modulo : public Binary_Expr
 public:
     Binary_Modulo(Expr& pe1, Expr& pe2) : Binary_Expr(pe1, pe2) {}
 
-    virtual int eval()const{return opl->eval()%opr->eval();}
+    virtual int eval()const{return opl.eval()%opr.eval();}
 };
 
 

@@ -11,10 +11,14 @@
 
 
 int Binary_Expr::eval()const{
-    return 0;
+    return opl.eval()*opr.eval();
 }
 
 Binary_Expr::~Binary_Expr(){
-    delete opl;
-    delete opr;
+    delete &opl;
+    delete &opr;
+}
+
+Expr* Binary_Expr::clone() const{
+    return new Binary_Expr(opl,opr);
 }

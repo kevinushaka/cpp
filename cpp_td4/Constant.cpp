@@ -12,3 +12,8 @@
 int Constant::eval()const{
     return val;
 }
+
+
+Expr* Constant::clone() const{
+     return new Constant(val);
+}

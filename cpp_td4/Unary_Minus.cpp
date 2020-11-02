@@ -9,5 +9,5 @@
 #include "Unary_Minus.h"
 
 int Unary_Minus::eval()const{
-    return -(op->eval());
+    return -(op.eval());
 }

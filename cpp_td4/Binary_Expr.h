@@ -15,13 +15,13 @@
 class Binary_Expr : public Expr
 {
 protected:
-    Expr* opl;
-    Expr* opr;
+    Expr& opl;
+    Expr& opr;
 public:
-    Binary_Expr(Expr& pe1, Expr& pe2) : opl(pe1.clone()), opr(pe2.clone()) {}
+    Binary_Expr(Expr& pe1, Expr& pe2) : opl(*pe1.clone()), opr(*pe2.clone()) {}
     virtual int eval()const;
-    ~Binary_Expr();
-    Binary_Expr* clone() const{ return new Binary_Expr(*opl,*opr);}
+    virtual ~Binary_Expr();
+    virtual Expr* clone() const;
+    
 };
-
 #endif

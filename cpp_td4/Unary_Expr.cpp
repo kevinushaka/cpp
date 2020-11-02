@@ -10,9 +10,13 @@
 #include "Unary_Expr.h"
 
 int Unary_Expr::eval()const{
-    return op->eval();
+    return op.eval();
 }
 
 Unary_Expr::~Unary_Expr(){
-  
+    delete &op;
+}
+
+Expr* Unary_Expr::clone() const{ 
+    return new Unary_Expr(op);
 }

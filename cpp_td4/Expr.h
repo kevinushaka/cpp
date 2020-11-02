@@ -26,11 +26,12 @@ class Expr{
     };
 
 
-    virtual int eval()const;
+    virtual int eval()=0;
 
-    virtual ~Expr();
+    virtual ~Expr()= default;
 
-    virtual Expr* clone() const{ return new Expr();}
+    virtual Expr* clone() const=0;
+    
 };
 
 

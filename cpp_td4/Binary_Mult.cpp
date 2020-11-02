@@ -12,5 +12,5 @@
 
 
 int Binary_Mult::eval()const{
-    return opl->eval()*opr->eval();
+    return opl.eval()*opr.eval();
 }

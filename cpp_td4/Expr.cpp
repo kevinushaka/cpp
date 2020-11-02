@@ -9,11 +9,3 @@
 
 #include "Expr.h"
 
-
-    int Expr::eval()const{
-            return 0;
-    };
-
-    Expr::~Expr(){
-
-    }

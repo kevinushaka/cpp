@@ -8,3 +8,8 @@
 
 
 #include "Unary_Plus.h"
+
+
+int Unary_Plus::eval()const{
+     return op.eval();
+}

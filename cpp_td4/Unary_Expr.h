@@ -16,15 +16,15 @@
 class Unary_Expr : public Expr
 {
 protected:
-    Expr* op;
+    Expr& op;
 public:
-    Unary_Expr(Expr& pe) : op(pe.clone()) {}
+    Unary_Expr(Expr& pe) : op(*pe.clone()) {}
 
     virtual int eval()const;
 
-    ~Unary_Expr();
+    virtual ~Unary_Expr();
 
-    virtual Unary_Expr* clone() const{ return new Unary_Expr(*op);}
+    virtual Expr* clone() const;
 };
 
 

@@ -22,7 +22,7 @@ private:
 public:
     Constant(int v) : val(v) {}
     virtual int eval()const;
-    virtual Constant* clone() const{ return new Constant(val);}
+    virtual Expr* clone() const;
 };
 
 #endif
