@@ -2,12 +2,11 @@
 # Basic C++: makefile example to use as a reminder or as a template
 #-----------------------------------------------------------------------
 # Julien DeAntoni --- No Copyright 2016
-# $Id: convenient Makefile but muist be tuned for templated project 
+# $Id: convenient Makefile but must be tuned for templated project 
 #      v0.2 2016/09/06
 #=======================================================================
 
 #only ok for project with no templated classes
-$(info $(SHELL))
 
 #compiler
 COMPILER = g++
@@ -17,10 +16,10 @@ LINKER =g++
 #options for linker and compiler
 FLAGS =-g -ansi -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -D_DEBUG_ -std=c++11
 
-EXE_NAME= main.exe
+EXE_NAME= expressions.exe
 
 #can have several ones separated by spaces, only cpp files
-SOURCES = main.cpp node.cpp
+SOURCES = Binary_Div.cpp  Binary_Expr.cpp  Binary_Mult.cpp  Binary_Plus.cpp  Constant.cpp  Expr.cpp  main_Expr.cpp  Unary_Expr.cpp  Unary_Minus.cpp  Unary_Plus.cpp
 
 
 #PATH to extra header used in the project (when using libs not installed in the OS)
@@ -38,9 +37,6 @@ $(EXE_NAME): $(LINKOBJ)
 %.o: %.cpp %.h
 	$(COMPILER) -g -c $< -o $@ $(INC_PATHS) $(FLAGS)
 
-%.o: %.cpp 
-	$(COMPILER) -g -c $< -o $@ $(INC_PATHS) $(FLAGS)
-	
 # cleanup
 clean:
 	rm -f $(LINKOBJ)
