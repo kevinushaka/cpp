@@ -19,9 +19,9 @@ protected:
     Expr& opr;
 public:
     Binary_Expr(Expr& pe1, Expr& pe2) : opl(*pe1.clone()), opr(*pe2.clone()) {}
-    virtual int eval()const;
+    virtual int eval()const=0;
     virtual ~Binary_Expr();
-    virtual Expr* clone() const;
+    Expr* clone() const;
     
 };
 #endif

@@ -10,10 +10,6 @@
 #include "Binary_Expr.h"
 
 
-int Binary_Expr::eval()const{
-    return opl.eval()*opr.eval();
-}
-
 Binary_Expr::~Binary_Expr(){
     delete &opl;
     delete &opr;
